@@ -43,8 +43,10 @@ let wordArray = '';
 function createWordStore() {
     document.getElementById('buttonsDiv').addEventListener('click', function() {
         wordStore = document.getElementById('textInput').value;
-        language = event.target.id;
-        createTranslateStore(language);
+        if(event.target.id !== 'lucky') {
+            language = event.target.id;
+            createTranslateStore(language);
+        }  
     } );    
 }
 
@@ -74,4 +76,22 @@ function printToDom(string) {
     div.innerHTML = string;
 }
 
+function lucky() {
+    document.getElementById('lucky').addEventListener('click', function() {
+        wordStore = document.getElementById('textInput').value;
+        let rando = Math.floor((Math.random() * 3) + 1);
+        if(rando === 1) {
+            language = 'french';
+        }
+        else if(rando === 2) {
+            language = 'spanish';
+        }
+        else if(rando === 3) {
+            language = 'german';
+        }
+        createTranslateStore(language);
+} );
+}
+
 createWordStore();
+lucky();
