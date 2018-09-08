@@ -28,32 +28,50 @@ const german = {
     'person': 'person' 
 }
 
+const myLanguage = {
+    'french': french,
+    'spanish': spanish,
+    'german': german,
+}
+
+let translateStore = '';
+let translateString = '';
+let wordStore = '';
+let language = '';
+let wordArray = '';
+
 function createWordStore() {
     document.getElementById('buttonsDiv').addEventListener('click', function() {
-        let wordStore = document.getElementById('textInput').value;
+        wordStore = document.getElementById('textInput').value;
+        language = event.target.id;
+        createTranslateStore(language);
     } );    
 }
 
-function createTranslateStore() {
-    let wordArray = Object.getOwnPropertyNames('french')
+function createTranslateStore(lang) {
+    wordArray = Object.getOwnPropertyNames('french')
     for(let i = 0; i < wordArray.length; i++) {
         if(wordArray[i] = wordStore) {
-            let translateStore = wordArray[i];
+            translateStore = wordArray[i];
+            createTranslateString(translateStore, lang);
             break;
         }
         else {
-            let translateStore = "I'm sorry, I only know seven words plus this phrase explaining that fact";
+            printToDom("Im sorry, I only know seven words plus this phrase explaining that fact");
         }
     }
-    createTranslateString(translateStore);  
+      
 }
 
-function createTranslateString(word, language) {
-    let translateString = language[word];
+function createTranslateString(word, lng) {
+    translateString = myLanguage[lng][word];
+    console.log(translateString);
+    printToDom(translateString);
 }
 
 function printToDom(string) {
     const div = document.getElementById('textOutput');
-    div.innerHTML += string;
+    div.innerHTML = string;
 }
 
+createWordStore();
