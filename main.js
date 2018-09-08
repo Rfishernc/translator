@@ -47,3 +47,9 @@ function createTranslateStore() {
 function createTranslateString(word, language) {
     let translateString = language[word];
 }
+
+function printToDom(string) {
+    const div = document.getElementById('textOutput');
+    div.innerHTML += string;
+}
+
