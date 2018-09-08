@@ -1,0 +1,21 @@
+body {
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textInput {
+    margin-left: 25%;
+}
+
+#buttonsDiv {
+    padding-top: 1em;
+}
+
+#textOutput {
+    background-color: white;
+    margin-top: 1em;
+    border: 2px black solid;
+}
+
