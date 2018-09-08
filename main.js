@@ -28,6 +28,12 @@ const german = {
     'person': 'person' 
 }
 
+function createWordStore() {
+    document.getElementById('buttonsDiv').addEventListener('click', function() {
+        let wordStore = document.getElementById('textInput').value;
+    } );    
+}
+
 function createTranslateStore() {
     let wordArray = Object.getOwnPropertyNames('french')
     for(let i = 0; i < wordArray.length; i++) {
@@ -41,4 +47,3 @@ function createTranslateStore() {
 function createTranslateString(word, language) {
     let translateString = language[word];
 }
-
