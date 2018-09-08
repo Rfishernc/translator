@@ -33,3 +33,17 @@ function createWordStore() {
         let wordStore = document.getElementById('textInput').value;
     } );    
 }
+
+function createTranslateStore() {
+    let wordArray = Object.getOwnPropertyNames('french')
+    for(let i = 0; i < wordArray.length; i++) {
+        if(wordArray[i] = wordStore) {
+            let translateStore = wordArray[i];
+        }
+    }
+    createTranslateString(translateStore);  
+}
+
+function createTranslateString(word, language) {
+    let translateString = language[word];
+}
