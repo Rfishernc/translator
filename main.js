@@ -28,17 +28,10 @@ const german = {
     'person': 'person' 
 }
 
-function createTranslateStore() {
-    let wordArray = Object.getOwnPropertyNames('french')
-    for(let i = 0; i < wordArray.length; i++) {
-        if(wordArray[i] = wordStore) {
-            let translateStore = wordArray[i];
-        }
-    }
-    createTranslateString(translateStore);  
+function printToDom(string) {
+    const div = document.getElementById('textOutput');
+    div.innerHTML += string;
 }
 
-function createTranslateString(word, language) {
-    let translateString = language[word];
-}
+
 
