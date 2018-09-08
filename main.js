@@ -39,6 +39,10 @@ function createTranslateStore() {
     for(let i = 0; i < wordArray.length; i++) {
         if(wordArray[i] = wordStore) {
             let translateStore = wordArray[i];
+            break;
+        }
+        else {
+            let translateStore = "I'm sorry, I only know seven words plus this phrase explaining that fact";
         }
     }
     createTranslateString(translateStore);  
