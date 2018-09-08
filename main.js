@@ -27,3 +27,9 @@ const german = {
     'dog': 'hund',
     'person': 'person' 
 }
+
+function createWordStore() {
+    document.getElementById('buttonsDiv').addEventListener('click', function() {
+        let wordStore = document.getElementById('textInput').value;
+    } );    
+}
