@@ -6,7 +6,7 @@ The translator only knows the following words:
 hello, goodbye, library, beer, cat, dog, person
 
 ## Screenshots
-![main screen](translator.PNG)
+![main screen](translatorscreen.PNG)
 
 ## How to run this project
 * Use npm to install http-server in your terminal:
